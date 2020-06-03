@@ -1,9 +1,9 @@
-const codebreakerType = prompt("If you are playing enter 'Yes'.");
+const codebreakerType = prompt("If you are playing enter 'yes'.");
 let codemaker = new Codemaker();
 let codebreaker = new Codebreaker();
 let mastercode = codemaker.generateCode();
 let tries = 0;
-if (codebreakerType === "Yes") {
+if (codebreakerType.toLowerCase() === "yes") {
   while (tries <= 12) {
     if (tries === 12) {
       alert("You've lost!");
