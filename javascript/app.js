@@ -1,4 +1,5 @@
 //Currently in the middle of task 3. Computer can guess but doesn't take hints in consideration.
+// to run the program, open the index.html in the browser of your choice :)
 
 const codebreakerType = prompt("If you are playing enter 'yes'.");
 let codemaker = new Codemaker();
