@@ -3,8 +3,8 @@ let codebreaker = new Codebreaker();
 let mastercode = codemaker.generateCode();
 
 let tries = 0;
-while (tries <= 13) {
-  if (tries === 13) {
+while (tries <= 12) {
+  if (tries === 12) {
     alert("You've lost!");
     break;
   }
