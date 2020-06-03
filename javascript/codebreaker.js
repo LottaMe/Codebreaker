@@ -1,6 +1,11 @@
+const generateRandomIndex = (theArray) => {
+  const number = Math.floor(Math.random() * theArray.length);
+  return number;
+};
 class Codebreaker {
   constructor() {
     this.currentGuess = [];
+    this.allGuesses = [];
   }
   makeGuess() {
     const user_input = prompt("Please Enter four numbers  ");
@@ -19,5 +24,23 @@ class Codebreaker {
         possibleGuesses.push(combination);
       }
     }
+    return possibleGuesses;
+  }
+
+  computerGuess() {
+    const allPossibleGuesses = this.makePossibleGuesses();
+    let randomGuess =
+      allPossibleGuesses[generateRandomIndex(allPossibleGuesses)];
+    if (this.allGuesses.includes(randomGuess)) {
+      while (this.allGuesses.includes(randomGuess)) {
+        randomGuess =
+          allPossibleGuesses[generateRandomIndex(allPossibleGuesses)];
+      }
+    }
+    this.currentGuess = randomGuess;
+    this.allGuesses.push(randomGuess);
+    console.log(randomGuess);
+
+    return randomGuess;
   }
 }
