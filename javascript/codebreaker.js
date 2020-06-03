@@ -1,11 +1,11 @@
 class Codebreaker {
   constructor() {
-    this.currentGuess = ["1", "2", "3", "4"];
+    this.currentGuess = [];
   }
   makeGuess() {
     const user_input = prompt("Please Enter four numbers  ");
 
-    for (let i = 0; i < user_input.length; i++) {
+    for (let i = 0; i < 4; i++) {
       this.currentGuess[i] = parseInt(user_input[i]);
     }
     return this.currentGuess;
