@@ -1,3 +1,5 @@
+//Currently in the middle of task 3. Computer can guess but doesn't take hints in consideration.
+
 const codebreakerType = prompt("If you are playing enter 'yes'.");
 let codemaker = new Codemaker();
 let codebreaker = new Codebreaker();
