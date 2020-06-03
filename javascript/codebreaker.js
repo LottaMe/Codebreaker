@@ -10,4 +10,14 @@ class Codebreaker {
     }
     return this.currentGuess;
   }
+  makePossibleGuesses() {
+    let possibleGuesses = [];
+    const evilGuesses = ["0", "7", "8", "9"];
+    for (let i = 1111; i < 6667; i++) {
+      const combination = i.toString().split("");
+      if (!combination.some((x) => evilGuesses.includes(x))) {
+        possibleGuesses.push(combination);
+      }
+    }
+  }
 }

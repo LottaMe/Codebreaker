@@ -8,7 +8,7 @@ while (tries <= 12) {
     alert("You've lost!");
     break;
   }
-
+  codebreaker.makePossibleGuesses();
   let currentGuess = codebreaker.makeGuess();
   document.getElementById("currentGuess").innerHTML = codebreaker.currentGuess;
   let hintCount1 = codemaker.compareCode(currentGuess)[0];
