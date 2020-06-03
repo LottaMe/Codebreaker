@@ -9,7 +9,7 @@ if (codebreakerType === "Yes") {
       alert("You've lost!");
       break;
     }
-
+    let currentGuess = codebreaker.makeGuess();
     document.getElementById("currentGuess").innerHTML =
       codebreaker.currentGuess;
     let hintCount1 = codemaker.compareCode(currentGuess)[0];
@@ -32,6 +32,17 @@ if (codebreakerType === "Yes") {
       break;
     }
     let currentGuess = codebreaker.computerGuess();
+    let hintCount1 = codemaker.compareCode(currentGuess)[0];
+    document.getElementById("hintCounter1").innerHTML = hintCount1;
+    let hintCount2 = codemaker.compareCode(currentGuess)[1];
+    document.getElementById("hintCounter2").innerHTML = hintCount2;
+
+    if (hintCount1 === 4) {
+      alert("you've won!");
+      break;
+    } else {
+      alert("Attempt Not Successful");
+    }
     tries++;
   }
 }
