@@ -11,9 +11,9 @@ while (tries <= 12) {
 
   let currentGuess = codebreaker.makeGuess();
   document.getElementById("currentGuess").innerHTML = codebreaker.currentGuess;
-  let hintCount1 = codemaker.getFirstHint(currentGuess);
+  let hintCount1 = codemaker.compareCode(currentGuess)[0];
   document.getElementById("hintCounter1").innerHTML = hintCount1;
-  let hintCount2 = codemaker.getSecondHint(currentGuess);
+  let hintCount2 = codemaker.compareCode(currentGuess)[1];
   document.getElementById("hintCounter2").innerHTML = hintCount2;
 
   if (hintCount1 === 4) {
